@@ -9,11 +9,11 @@ export const data = [
     id: "1",
   },
   {
-    name: "Wood",
-    description: "Horror",
+    name: "Avatar",
+    description: "Action-Adventure",
     rating: "4",
     imgUrl:
-      "https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg",
+      "https://lumiere-a.akamaihd.net/v1/images/au_article_disneyplus_poster_avatar_a6e36ee1.png",
     isDone: true,
     id: "2",
   },
@@ -31,7 +31,7 @@ export const data = [
     description: "Action-Adventure",
     rating: "3",
     imgUrl:
-      "https://cdn.shopify.com/s/files/1/0037/8008/3782/products/IMG_7259_1024x1024@2x.jpg?v=1640349274",
+      "https://m.media-amazon.com/images/I/71oASSfGg0L.jpg",
     isDone: true,
     id: "4",
   },
@@ -45,7 +45,7 @@ export const data = [
     id: "5",
   },
   {
-    name: "Jusrassic Park",
+    name: "Jurassic Park",
     description: "Fiction",
     rating: "7",
     imgUrl:
@@ -53,5 +53,22 @@ export const data = [
     isDone: true,
     id: "6",
   },
-  
+  {
+    name: "The dictator",
+    description: "Comedy",
+    rating: "9.9",
+    imgUrl:
+      "https://www.joblo.com/wp-content/uploads/2012/04/dictator-face-poster-1.jpg",
+    isDone: true,
+    id: "7",
+  },
+  {
+    name: "Inception",
+    description: "Mystery",
+    rating: "10",
+    imgUrl:
+      "http://cdn.shopify.com/s/files/1/0037/8008/3782/products/inception_advance_SD18120_B_2_framed1_57a8f726-e4da-4a60-877b-95b210b8fc91-367857_1200x1200.jpg?v=1611688027",
+    isDone: true,
+    id: "8",
+  },
 ];

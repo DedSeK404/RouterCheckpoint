@@ -69,13 +69,9 @@ button:hover {
 .MC:hover{
   scale: 1.05;
   transition: 0.3s;
-  box-shadow:
-  0px 0px 00px #e50814,
-  0px 0px 00px #e50814,
-  0px 0px 00px #e50814,
-  0px 0px 0px #e50814,
-  5px 6.7px 200px #e50814,
-  0px 0px 0px #e50814
+  box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+  
+  
 ;
 }
 
