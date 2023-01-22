@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+*{
+  font-family: 'Josefin Sans', sans-serif;
+}
+.a {
+  border: solid 1px;
+  height: fit-content;
+  margin-top: 5%;
+  background-color: #0f0f0f;
+}
+.b {
+  border: solid 1px;
+  margin-top: 5%;
+  background-color: rgb(41, 41, 41);
+}
+.c {
+  border: solid 1px;
+  height: fit-content;
+  background-color: rgb(53, 53, 53);
+  padding: 20px;
+  margin-top: 5%;
+}
+.logo {
+  width: 120px;
+}
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  background-color: rgb(41, 41, 41);
+}
+button {
+  border: none;
+  background: none;
+  color: white;
+}
+button:hover {
+  color: #e50814;
+  transition: 0.3s;
+}
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(41, 41, 41);
+  color: #e50814;
+  margin-top: 5%;
+}
+.watch {
+  border-radius: 0%;
+  background-color: #e50814;
+  border: none;
+}
+.btn_add{
+  background-color: #dc3545;
+  height: 40px;
+}
+.btn_add:hover{
+  color: white;
+}
+
+.MC{
+  transition: 0.3s;
+}
+
+.MC:hover{
+  scale: 1.05;
+  transition: 0.3s;
+  box-shadow:
+  0px 0px 00px #e50814,
+  0px 0px 00px #e50814,
+  0px 0px 00px #e50814,
+  0px 0px 0px #e50814,
+  5px 6.7px 200px #e50814,
+  0px 0px 0px #e50814
+;
+}
+
+.movie_poster{
+  width: 535px;
+  transition: 0.3s;
+}
+.movie_poster:hover{
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.a1{
+  background-color: rgb(41, 41, 41);
+  margin-top: 5%;
+  padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.T{
+  color: #e50814;
+  font-size: 60px;
+
+  
+}
+.c1{
+  border: solid 1px;
+  background-color: rgb(53, 53, 53);
+  margin-top: 5%;
+  padding: 40px;
+}
+.b1{
+  margin-top: 5%;
+}
+h2{
+  color: #e50814;
+}
+.mp{
+  color: white;
+}
