@@ -3,15 +3,12 @@ import "./App.css";
 import Container from "react-bootstrap/Container";
 import { Header } from "./Components/Header";
 import { Footer } from "./Components/Footer";
-import { useState } from "react";
-import { FetchAPI } from "./Components/Api";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { Home } from "./Home";
+import { Description } from "./Components/Description";
+import { data } from "./Components/data";
+import { Add } from "./Components/Add";
+import { useState } from "react";
 
 function App() {
   const navigate = useNavigate();
@@ -23,10 +20,9 @@ function App() {
   function handleHome() {
     navigateHome("/");
   }
-
-  const [moviename, setMovieName] = useState("");
-  const handleMovieName = (value) => {
-    setMovieName(value);
+  const [list, setList] = useState(data);
+  const handelAdd = (newFilm) => {
+    setList([...list, newFilm]);
   };
 
   return (
@@ -37,20 +33,18 @@ function App() {
         <Container>
           <Routes>
             <Route
-              path="/description"
-              element={
-                <FetchAPI moviename={moviename} handleHome={handleHome} />
-              }
+              path="/description/:idmovie"
+              element={<Description data={data} handleHome={handleHome} />}
+            />
+
+<Route
+              path="/add"
+              element={<Add  handelAdd={ handelAdd}/>}
             />
 
             <Route
               path="/"
-              element={
-                <Home
-                  handleMovieName={handleMovieName}
-                  handleDescription={handleDescription}
-                />
-              }
+              element={<Home handleDescription={handleDescription} />}
             ></Route>
           </Routes>
         </Container>

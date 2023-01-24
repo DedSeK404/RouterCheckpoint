@@ -7,6 +7,7 @@ import { data } from "./Components/data";
 import { MovieList } from "./Components/MovieList";
 import { useState } from "react";
 import { Search } from "./Components/Search";
+import { Route, Routes } from "react-router-dom";
 
 
 
@@ -46,7 +47,7 @@ export const Home = ({handleMovieName,handleDescription}) => {
                       gap: "10px",
                     }}
                     className="a"
-                    sm={8}
+                    sm={12}
                   >
                     <MovieList
                       data={list}
@@ -57,9 +58,7 @@ export const Home = ({handleMovieName,handleDescription}) => {
 
                     />
                   </Col>
-                  <Col className="b" sm={4}>
-                    <Add handelAdd={handelAdd} />
-                  </Col>
+                  
                 </Row>
               </div>
     )

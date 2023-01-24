@@ -14,6 +14,7 @@
   border: solid 1px;
   margin-top: 5%;
   background-color: rgb(41, 41, 41);
+  
 }
 .c {
   border: solid 1px;
@@ -77,12 +78,9 @@ button:hover {
 
 .movie_poster{
   width: 535px;
-  transition: 0.3s;
+  
 }
-.movie_poster:hover{
-  opacity: 0.7;
-  transition: 0.3s;
-}
+
 .a1{
   background-color: rgb(41, 41, 41);
   margin-top: 5%;
@@ -111,4 +109,13 @@ h2{
 }
 .mp{
   color: white;
+}
+.active{
+  color: #e50814;
+  transition: 0.3s;
+}
+
+.movie-app > .row{
+  overflow-x: auto;
+  flex-wrap: nowrap;
 }

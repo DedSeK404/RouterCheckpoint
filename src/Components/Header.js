@@ -1,14 +1,17 @@
-import  logo  from "./Logo.png";
+import { Link,NavLink } from "react-router-dom";
+import logo from "./Logo.png";
+import "../App.css";
 
 export const Header = () => {
-    return(
-        <div className="header">
-            <button>TV Shows</button>
-            <button> Movies</button>
-            <img className="logo" src={logo} alt="0"/>
-            <button>Recently Added</button>
-            <button>My list</button>
-        </div>
-    )
-}
-
+  return (
+    <div className="header">
+      <NavLink style={{textDecoration:"none", fontSize:"25px"}} to="/">
+         Movies
+      </NavLink>
+      <img className="logo" src={logo} alt="0" />
+      <NavLink style={{textDecoration:"none", fontSize:"25px"}} to="/add">
+        Add
+      </NavLink>
+    </div>
+  );
+};
