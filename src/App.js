@@ -11,15 +11,9 @@ import { Add } from "./Components/Add";
 import { useState } from "react";
 
 function App() {
-  const navigate = useNavigate();
-  function handleDescription() {
-    navigate("/description");
-  }
+  
 
-  const navigateHome = useNavigate();
-  function handleHome() {
-    navigateHome("/");
-  }
+  
   const [list, setList] = useState(data);
   const handelAdd = (newFilm) => {
     setList([...list, newFilm]);
@@ -34,17 +28,14 @@ function App() {
           <Routes>
             <Route
               path="/description/:idmovie"
-              element={<Description data={data} handleHome={handleHome} />}
+              element={<Description data={list} />}
             />
 
-<Route
-              path="/add"
-              element={<Add  handelAdd={ handelAdd}/>}
-            />
+            <Route path="/add" element={<Add handelAdd={handelAdd} />} />
 
             <Route
               path="/"
-              element={<Home handleDescription={handleDescription} />}
+              element={<Home list={list} />}
             ></Route>
           </Routes>
         </Container>

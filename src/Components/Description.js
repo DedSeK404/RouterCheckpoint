@@ -1,10 +1,10 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-export const Description = ({data, handleHome}) => {
- 
+export const Description = ({data}) => {
+  const navigate = useNavigate();
     const { idmovie } = useParams();
   
     const movie = data.find((el) => el.id == idmovie);
@@ -15,7 +15,7 @@ export const Description = ({data, handleHome}) => {
                 <Row>
                  
                   <button
-                    onClick={() => handleHome()}
+                    onClick={() => navigate("/")}
                     style={{ marginTop: "5%" }}
                     className="btn_add"
                   >

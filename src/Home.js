@@ -7,18 +7,9 @@ import { data } from "./Components/data";
 import { MovieList } from "./Components/MovieList";
 import { useState } from "react";
 import { Search } from "./Components/Search";
-import { Route, Routes } from "react-router-dom";
 
-
-
+export const Home = ({ list }) => {
   
-
-export const Home = ({handleMovieName,handleDescription}) => {
-
-    const [list, setList] = useState(data);
-  const handelAdd = (newFilm) => {
-    setList([...list, newFilm]);
-  };
   const [search, setSearch] = useState("");
   const handelSName = (value) => {
     setSearch(value);
@@ -29,37 +20,33 @@ export const Home = ({handleMovieName,handleDescription}) => {
     setSearchRate(value);
   };
 
-
-    
-    return(
-        <div>
-                <Row>
-                  <Col className="c" sm={12}>
-                    <Search handelSName={handelSName} handelRate={handelRate} />
-                  </Col>
-                </Row>
-                <Row>
-                  <Col
-                    style={{
-                      display: "flex",
-                      flexWrap: "wrap",
-                      padding: "20px",
-                      gap: "10px",
-                    }}
-                    className="a"
-                    sm={12}
-                  >
-                    <MovieList
-                      data={list}
-                      search={search}
-                      searchRate={searchRate}
-                      handleMovieName={handleMovieName}
-                      handleDescription={handleDescription}
-
-                    />
-                  </Col>
-                  
-                </Row>
-              </div>
-    )
-}
+  return (
+    <div>
+      <Row>
+        <Col className="c" sm={12}>
+          <Search handelSName={handelSName} handelRate={handelRate} />
+        </Col>
+      </Row>
+      <Row>
+        <Col
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            padding: "20px",
+            gap: "10px",
+          }}
+          className="a"
+          sm={8}
+        >
+          <MovieList
+            data={list}
+            search={search}
+            searchRate={searchRate}
+            
+          />
+        </Col>
+        
+      </Row>
+    </div>
+  );
+};
